@@ -40,9 +40,9 @@ export function ContactSection() {
       <div className="mt-12 grid gap-8 lg:grid-cols-5">
         <div className="space-y-4 lg:col-span-2">
           {[
-            { Icon: MapPin, title: "Office Address", value: "Hyderabad, Telangana, India" },
-            { Icon: Phone, title: "Mobile", value: "+91 98765 43210" },
-            { Icon: Mail, title: "Email", value: "info@vkrtaxtech.in" },
+            { Icon: MapPin, title: "Office Address", value: "CCRR+854, Mothi Nagar, Vengal Rao Nagar, Madhura Nagar, Hyderabad, Telangana 500038" },
+            { Icon: Phone, title: "Mobile", value: "+91 85001 03363, +91 86888 41152" },
+            { Icon: Mail, title: "Email", value: "vkrtaxtech@gmail.com" },
             { Icon: Globe, title: "Website", value: "www.vkrtaxtech.in" },
           ].map(({ Icon, title, value }) => (
             <div key={title} className="flex items-start gap-4 rounded-xl border border-border bg-card p-5 shadow-[var(--shadow-card)]">
@@ -58,7 +58,7 @@ export function ContactSection() {
           <div className="overflow-hidden rounded-xl border border-border shadow-[var(--shadow-card)]">
             <iframe
               title="Google Map"
-              src="https://www.google.com/maps?q=Hyderabad,Telangana&output=embed"
+              src="https://www.google.com/maps?q=CCRR%2B854%2C+Mothi+Nagar%2C+Vengal+Rao+Nagar%2C+Madhura+Nagar%2C+Hyderabad%2C+Telangana+500038&output=embed"
               className="h-64 w-full" loading="lazy"
             />
           </div>

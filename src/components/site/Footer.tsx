@@ -60,9 +60,10 @@ export function Footer() {
             <Button type="submit" style={{ background: "var(--gradient-gold)", color: "var(--navy-deep)" }}>Join</Button>
           </form>
           <div className="mt-6 space-y-2 text-sm opacity-85">
-            <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-[color:var(--gold)]" /> +91 98765 43210</div>
-            <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-[color:var(--gold)]" /> info@vkrtaxtech.in</div>
-            <div className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-[color:var(--gold)]" /> Hyderabad, Telangana, India</div>
+            <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-[color:var(--gold)]" /> <a href="tel:+918500103363" className="hover:text-[color:var(--gold)]">+91 85001 03363</a></div>
+            <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-[color:var(--gold)]" /> <a href="tel:+918688841152" className="hover:text-[color:var(--gold)]">+91 86888 41152</a></div>
+            <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-[color:var(--gold)]" /> <a href="mailto:vkrtaxtech@gmail.com" className="hover:text-[color:var(--gold)]">vkrtaxtech@gmail.com</a></div>
+            <div className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-[color:var(--gold)]" /> CCRR+854, Mothi Nagar, Vengal Rao Nagar, Madhura Nagar, Hyderabad, Telangana 500038</div>
           </div>
         </div>
       </div>
