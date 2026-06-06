@@ -139,7 +139,7 @@ export function TeamSection() {
         <div className="grid gap-0 md:grid-cols-5">
           <div className="md:col-span-2">
             <div className="aspect-[4/5] w-full overflow-hidden bg-white/10">
-              <img src={founder.image} alt={`${founder.name} – ${founder.role}`} className="h-full w-full object-cover" />
+              <img src={founder.image} alt={`${founder.name} – ${founder.role}`} loading="eager" decoding="async" fetchPriority="high" width={600} height={750} className="h-full w-full object-cover" />
             </div>
           </div>
           <div className="p-8 text-white md:col-span-3 md:p-10">
