@@ -28,7 +28,7 @@ export function Hero() {
               <Link to="/contact"><Phone className="h-4 w-4" /> Contact Us</Link>
             </Button>
             <Button asChild size="lg" className="bg-[#25D366] text-white hover:bg-[#1ebe57]">
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"><MessageCircle className="h-4 w-4" /> WhatsApp Chat</a>
+              <a href="https://wa.me/918500103363" target="_blank" rel="noopener noreferrer"><MessageCircle className="h-4 w-4" /> WhatsApp Chat</a>
             </Button>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-6 text-center">
