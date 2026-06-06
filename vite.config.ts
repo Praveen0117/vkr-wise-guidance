@@ -9,7 +9,8 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
+    // nitro/vite builds from this.
+    // Using node-server preset so Nodemailer (which needs Node.js TCP/TLS) works in production.
+    server: { entry: "server", preset: "node-server" },
   },
 });

@@ -14,7 +14,7 @@ export type ServiceCategory = {
 
 export const services: ServiceCategory[] = [
   { slug: "gst", title: "GST Services", icon: Receipt, short: "Registration, returns, audits & notice handling.",
-    items: ["GST Registration", "GST Return Filing", "GST Annual Return", "GST Notice Handling", "LUT Filing", "GST Amendment", "GST Revocation", "E-Invoice & E-Way Bill Support"] },
+    items: ["GST Registration", "GST Return Filing", "GST Annual Return (GSTR-9 & 9C)", "GST Notice Handling", "LUT Filing", "GST Amendment", "GST Revocation", "E-Invoice & E-Way Bill Support", "GST Audit Support", "GSTR-10 Filing"] },
   { slug: "income-tax", title: "Income Tax Services", icon: FileText, short: "ITR filing, planning, TDS & notice support.",
     items: ["ITR Filing", "Tax Planning", "TDS Filing", "Advance Tax", "Capital Gain Tax", "Notice Reply Support"] },
   { slug: "registration", title: "Business Registration", icon: Building2, short: "Company, LLP, Partnership, NGO & MSME.",
@@ -22,7 +22,7 @@ export const services: ServiceCategory[] = [
   { slug: "roc", title: "ROC & LLP Compliance", icon: ScrollText, short: "Annual filings, KYC, amendments & winding up.",
     items: ["DIN KYC", "DPT-3", "ADT-1", "INC-20A", "LLP Form 11", "Company Compliance", "Director Change", "Share Transfer", "MOA/AOA Amendment", "Winding Up Services"] },
   { slug: "licenses", title: "Licenses & Registrations", icon: BadgeCheck, short: "FSSAI, IEC, Udyam, Startup India & more.",
-    items: ["FSSAI", "IEC Registration", "Trade License", "PF & ESI", "Professional Tax", "Startup India", "Udyam Registration", "LEI Code", "ISO Registration"] },
+    items: ["FSSAI", "IEC Registration", "Trade License", "PF & ESI", "Professional Tax", "Startup India", "Udyam Registration", "LEI Code", "ISO Registration","12A and 80G Registration","Darpan Registration","TG RERA Registration for Agents","Digital Signature (DSC)","Labor Certificate Registration"] },
   { slug: "trademark", title: "Trademark & IP", icon: Stamp, short: "Trademark, copyright, patent & design.",
     items: ["Trademark Registration", "Trademark Objection", "Trademark Hearing", "Trademark Renewal", "Copyright Registration", "Patent Registration", "Design Registration"] },
   { slug: "accounting", title: "Accounting & Payroll", icon: Calculator, short: "Bookkeeping, payroll & financial statements.",

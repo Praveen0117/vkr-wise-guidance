@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { services } from "@/lib/services-data";
 import { SectionHeading } from "./SectionHeading";
 import { z } from "zod";
+import { sendContactEmail } from "@/lib/api/contact.functions";
 
 const schema = z.object({
   name: z.string().trim().min(2).max(100),
@@ -21,8 +22,9 @@ const schema = z.object({
 export function ContactSection() {
   const [service, setService] = useState("");
   const [loading, setLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
     const parsed = schema.safeParse({
@@ -31,7 +33,16 @@ export function ContactSection() {
     });
     if (!parsed.success) { toast.error("Please complete all fields correctly."); return; }
     setLoading(true);
-    setTimeout(() => { setLoading(false); toast.success("Thanks! Our team will reach out within 24 hours."); (e.target as HTMLFormElement).reset(); setService(""); }, 700);
+    try {
+      await sendContactEmail({ data: parsed.data });
+      toast.success("Thanks! Our team will reach out within 24 hours.");
+      formRef.current?.reset();
+      setService("");
+    } catch {
+      toast.error("Failed to send message. Please try again or contact us directly.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -63,7 +74,7 @@ export function ContactSection() {
             />
           </div>
         </div>
-        <form onSubmit={onSubmit} className="space-y-4 rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-elegant)] lg:col-span-3">
+        <form ref={formRef} onSubmit={onSubmit} className="space-y-4 rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-elegant)] lg:col-span-3">
           <div className="grid gap-4 sm:grid-cols-2">
             <div><Label htmlFor="name">Name</Label><Input id="name" name="name" required maxLength={100} /></div>
             <div><Label htmlFor="phone">Phone</Label><Input id="phone" name="phone" type="tel" required maxLength={15} /></div>
