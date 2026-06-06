@@ -110,6 +110,9 @@ function Avatar({ m }: { m: Member }) {
         src={m.image}
         alt={`${m.name} – ${m.role}`}
         loading="lazy"
+        decoding="async"
+        width={400}
+        height={500}
         className="h-full w-full object-cover"
       />
     );
