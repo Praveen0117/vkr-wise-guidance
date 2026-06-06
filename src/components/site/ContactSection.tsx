@@ -40,7 +40,7 @@ export function ContactSection() {
       <div className="mt-12 grid gap-8 lg:grid-cols-5">
         <div className="space-y-4 lg:col-span-2">
           {[
-            { Icon: MapPin, title: "Office Address", value: "CCRR+854, Mothi Nagar, Vengal Rao Nagar, Madhura Nagar, Hyderabad, Telangana 500038" },
+            { Icon: MapPin, title: "Office Address", value: "Flat No.301, Sai Asitha Kasturi Residency, H.No.176/C, Vengalrao Nagar, S.R. Nagar, Hyderabad - 500038" },
             { Icon: Phone, title: "Mobile", value: "+91 85001 03363, +91 86888 41152" },
             { Icon: Mail, title: "Email", value: "vkrtaxtech@gmail.com" },
             { Icon: Globe, title: "Website", value: "www.vkrtaxtech.in" },
@@ -58,7 +58,7 @@ export function ContactSection() {
           <div className="overflow-hidden rounded-xl border border-border shadow-[var(--shadow-card)]">
             <iframe
               title="Google Map"
-              src="https://www.google.com/maps?q=CCRR%2B854%2C+Mothi+Nagar%2C+Vengal+Rao+Nagar%2C+Madhura+Nagar%2C+Hyderabad%2C+Telangana+500038&output=embed"
+              src="https://www.google.com/maps?q=Flat+No.301,+Sai+Asitha+Kasturi+Residency,+H.No.176/C,+Vengalrao+Nagar,+S.R.+Nagar,+Hyderabad+-+500038&output=embed"
               className="h-64 w-full" loading="lazy"
             />
           </div>

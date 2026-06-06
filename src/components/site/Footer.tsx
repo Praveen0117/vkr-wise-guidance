@@ -63,7 +63,7 @@ export function Footer() {
             <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-[color:var(--gold)]" /> <a href="tel:+918500103363" className="hover:text-[color:var(--gold)]">+91 85001 03363</a></div>
             <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-[color:var(--gold)]" /> <a href="tel:+918688841152" className="hover:text-[color:var(--gold)]">+91 86888 41152</a></div>
             <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-[color:var(--gold)]" /> <a href="mailto:vkrtaxtech@gmail.com" className="hover:text-[color:var(--gold)]">vkrtaxtech@gmail.com</a></div>
-            <div className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-[color:var(--gold)]" /> CCRR+854, Mothi Nagar, Vengal Rao Nagar, Madhura Nagar, Hyderabad, Telangana 500038</div>
+            <div className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-[color:var(--gold)]" /> Flat No.301, Sai Asitha Kasturi Residency, H.No.176/C, Vengalrao Nagar, S.R. Nagar, Hyderabad - 500038</div>
           </div>
         </div>
       </div>
