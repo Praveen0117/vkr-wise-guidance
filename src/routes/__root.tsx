@@ -78,14 +78,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "VKRTAX" },
+      { name: "description", content: "VKRTAX Hub is a modern, responsive corporate website for tax, legal, and business consultancy services." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "VKRTAX" },
+      { property: "og:description", content: "VKRTAX Hub is a modern, responsive corporate website for tax, legal, and business consultancy services." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "VKRTAX" },
+      { name: "twitter:description", content: "VKRTAX Hub is a modern, responsive corporate website for tax, legal, and business consultancy services." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4f83d60b-e67c-45f3-b45c-ccdcbd81da02/id-preview-198d9ca0--9f34e443-f163-4869-bc93-6f4335d44164.lovable.app-1780737445349.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4f83d60b-e67c-45f3-b45c-ccdcbd81da02/id-preview-198d9ca0--9f34e443-f163-4869-bc93-6f4335d44164.lovable.app-1780737445349.png" },
     ],
     links: [
       {
