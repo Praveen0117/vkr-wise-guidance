@@ -7,6 +7,7 @@ import mahesh from "@/assets/team/mahesh.jpg.asset.json";
 import venkata from "@/assets/team/venkata-reddy.jpg.asset.json";
 import ashok from "@/assets/team/ashok.jpg.asset.json";
 import vidyadhar from "@/assets/team/vidyadhar.png.asset.json";
+import hussain from "@/assets/team/hussain.jpg.asset.json";
 
 type Member = {
   name: string;
@@ -25,7 +26,7 @@ const founder: Member = {
   experience: "14+ Years",
   image: krishna.url,
   initials: "VK",
-  bio: "Visionary leader and Tax Consultant with deep expertise in Direct & Indirect Taxation, GST, Corporate Law, Audit and Business Advisory. Trusted by businesses and individuals across India for end-to-end tax and legal solutions.",
+  bio: "A multi-disciplinary professional qualified in M.Com, LL.B and MBA with advanced studies in CA, CMA and CS, Vattikulla Krishna Rao brings 14+ years of leadership in Direct & Indirect Taxation, GST, Income Tax, International Taxation, Corporate Law, Statutory & Internal Audit, Company Incorporation, ROC compliance, FEMA, and Business Advisory. As Founder & CEO of VKRTAX TECH, he has guided 500+ businesses, startups, MSMEs, HNIs and salaried professionals across India through complex tax planning, GST litigation, departmental representations, fundraising and corporate restructuring. Known for combining sharp legal insight with practical business strategy, he is a trusted advisor for end-to-end tax, legal and financial solutions — committed to integrity, accuracy and long-term client growth.",
 };
 
 const team: Member[] = [
@@ -61,6 +62,7 @@ const team: Member[] = [
     role: "Partner – Direct Tax & Audit",
     quals: "B.Com, FCA",
     experience: "8+ Years",
+    image: hussain.url,
     initials: "KH",
     bio: "Fellow Chartered Accountant with strong expertise in Income Tax assessments, Tax Audit, GST advisory and representation before tax authorities.",
   },
