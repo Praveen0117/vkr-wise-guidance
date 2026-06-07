@@ -34,7 +34,7 @@ const team: Member[] = [
   },
   {
     name: "Sreenu Bathula",
-    role: "Senior Partner – Audit & TAX Export",
+    role: "Senior Partner – Audit & TAX Expert",
     quals: "CA, CMA",
     experience: "5+ Years",
     image: "/TeamImg/SRINU.jpeg",
@@ -70,7 +70,7 @@ const team: Member[] = [
   },
   {
     name: "Preetham Mandal",
-    role: "Senior Partner – TAX Export & Advisory",
+    role: "Senior Partner – TAX Expert & Advisory",
     quals: "FCA",
     experience: "15+ Years",
     initials: "PM",

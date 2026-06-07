@@ -25,6 +25,9 @@ export const sendContactEmail = createServerFn({ method: "POST" })
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: { user, pass },
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 15000,
     });
 
     await transporter.sendMail({
@@ -97,6 +100,9 @@ export const sendAppointmentEmail = createServerFn({ method: "POST" })
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: { user, pass },
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 15000,
     });
 
     const formattedDate = new Date(data.date).toLocaleDateString("en-IN", {
@@ -222,6 +228,9 @@ export const sendDocumentEmail = createServerFn({ method: "POST" })
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: { user, pass },
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 15000,
     });
 
     const fileList = data.files.map((f) => `<li>${f.name}</li>`).join("");
