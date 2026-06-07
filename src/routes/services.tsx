@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { services } from "@/lib/services-data";
 import { CheckCircle2 } from "lucide-react";
@@ -15,7 +15,13 @@ export const Route = createFileRoute("/services")({
     ],
     links: [{ rel: "canonical", href: "/services" }],
   }),
-  component: () => (
+  component: ServicesPage,
+});
+
+function ServicesPage() {
+  const navigate = useNavigate();
+
+  return (
     <Layout>
       <div className="border-b border-border py-16 text-white" style={{ background: "var(--gradient-hero)" }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -37,8 +43,13 @@ export const Route = createFileRoute("/services")({
               </div>
               <ul className="grid gap-2 sm:grid-cols-2 md:col-span-2">
                 {s.items.map((it) => (
-                  <li key={it} className="flex items-center gap-2 rounded-lg bg-secondary/60 px-3 py-2 text-sm">
-                    <CheckCircle2 className="h-4 w-4 shrink-0 text-[color:var(--gold-deep)]" />{it}
+                  <li key={it}>
+                    <button
+                      onClick={() => navigate({ to: "/contact" })}
+                      className="flex w-full items-center gap-2 rounded-lg bg-secondary/60 px-3 py-2 text-sm text-left transition-colors hover:bg-[color:var(--gold)]/20 hover:text-[color:var(--navy)] cursor-pointer"
+                    >
+                      <CheckCircle2 className="h-4 w-4 shrink-0 text-[color:var(--gold-deep)]" />{it}
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -48,5 +59,5 @@ export const Route = createFileRoute("/services")({
       </div>
       <ContactSection />
     </Layout>
-  ),
-});
+  );
+}

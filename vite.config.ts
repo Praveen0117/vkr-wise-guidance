@@ -13,4 +13,9 @@ export default defineConfig({
     // Using node-server preset so Nodemailer (which needs Node.js TCP/TLS) works in production.
     server: { entry: "server", preset: "node-server" },
   },
+  vite: {
+    preview: {
+      allowedHosts: ["vkr-wise-guidance-master.onrender.com",'vkrtaxtech.com'],
+    },
+  }
 });

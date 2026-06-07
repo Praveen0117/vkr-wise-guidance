@@ -1,6 +1,6 @@
 import {
   Receipt, FileText, Building2, ScrollText, Briefcase, ShieldCheck,
-  Stamp, Calculator, BookOpen, Scale, Gavel, BadgeCheck, TrendingUp, Landmark,
+  Stamp, Calculator, BookOpen, Scale, Gavel, BadgeCheck, TrendingUp, Landmark,Medal 
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -14,23 +14,23 @@ export type ServiceCategory = {
 
 export const services: ServiceCategory[] = [
   { slug: "gst", title: "GST Services", icon: Receipt, short: "Registration, returns, audits & notice handling.",
-    items: ["GST Registration", "GST Return Filing", "GST Annual Return (GSTR-9 & 9C)", "GST Notice Handling", "LUT Filing", "GST Amendment", "GST Revocation", "E-Invoice & E-Way Bill Support", "GST Audit Support", "GSTR-10 Filing"] },
+    items: ["GST Registration", "GST Return Filing", "GST Annual Return (GSTR-9 & 9C)", "GST Notice Handling", "LUT Filing", "GST Amendment", "GST Revocation", "E-Invoice & E-Way Bill Support", "GST Audit Support", "GSTR-10 Filing","GST Appellate Tribunal (GSTAT)"] },
   { slug: "income-tax", title: "Income Tax Services", icon: FileText, short: "ITR filing, planning, TDS & notice support.",
-    items: ["ITR Filing", "Tax Planning", "TDS Filing", "Advance Tax", "Capital Gain Tax", "Notice Reply Support"] },
+    items: ["ITR Filing", "Tax Planning", "TDS Filing", "Advance Tax", "Capital Gain Tax", "Notice Reply Support","Iconme Tax Appellate Tribunal"] },
   { slug: "registration", title: "Business Registration", icon: Building2, short: "Company, LLP, Partnership, NGO & MSME.",
     items: ["Company Registration", "LLP Registration", "Partnership Firm", "Proprietorship", "NGO Registration", "Section 8 Registration", "MSME Registration"] },
   { slug: "roc", title: "ROC & LLP Compliance", icon: ScrollText, short: "Annual filings, KYC, amendments & winding up.",
     items: ["DIN KYC", "DPT-3", "ADT-1", "INC-20A", "LLP Form 11", "Company Compliance", "Director Change", "Share Transfer", "MOA/AOA Amendment", "Winding Up Services"] },
   { slug: "licenses", title: "Licenses & Registrations", icon: BadgeCheck, short: "FSSAI, IEC, Udyam, Startup India & more.",
-    items: ["FSSAI", "IEC Registration", "Trade License", "PF & ESI", "Professional Tax", "Startup India", "Udyam Registration", "LEI Code", "ISO Registration","12A and 80G Registration","Darpan Registration","TG RERA Registration for Agents","Digital Signature (DSC)","Labor Certificate Registration"] },
+    items: ["FSSAI", "IEC Registration", "Trade License", "PF & ESI", "Professional Tax", "Startup India", "Udyam Registration", "LEI Code", "ISO Registration","12A and 80G Registration","Darpan Registration","TG RERA Registration for Agents","Digital Signature (DSC)","Labor Certificate Registration","Trust Registration","Socity Registration"] },
   { slug: "trademark", title: "Trademark & IP", icon: Stamp, short: "Trademark, copyright, patent & design.",
     items: ["Trademark Registration", "Trademark Objection", "Trademark Hearing", "Trademark Renewal", "Copyright Registration", "Patent Registration", "Design Registration"] },
   { slug: "accounting", title: "Accounting & Payroll", icon: Calculator, short: "Bookkeeping, payroll & financial statements.",
     items: ["Bookkeeping", "Payroll Processing", "Accounting Outsourcing", "Financial Statements", "Compliance Support"] },
   { slug: "audit", title: "Audit & Assurance", icon: ShieldCheck, short: "Statutory, tax, internal & stock audits.",
-    items: ["Tax Audit", "GST Audit", "Internal Audit", "Statutory Audit", "Stock Audit", "Concurrent Audit", "Due Diligence"] },
+    items: ["Tax Audit", "GST Audit", "Internal Audit", "Statutory Audit", "Stock Audit", "Concurrent Audit", "Due Diligence Audit","Inventory Verfication","Bank Audit Support","Financial Audit"] },
   { slug: "nclt", title: "NCLT & Corporate Legal", icon: Gavel, short: "Insolvency, disputes & company revival.",
-    items: ["Insolvency Matters", "Company Law Matters", "Shareholder Disputes", "Company Revival", "Corporate Litigation"] },
+    items: ["Insolvency Matters", "Shareholder Disputes", "Company Revival", "Corporate Litigation","NCLT Case Filing","Company Law Matters","Oppression & Mismanagement Cases","Insolvency & Bankruptcy Matters (IBC)","Company Winding Up Matters","Shareholder Disputes","Director Disqualification Matters","Revival of Company Petitions","Compounding of Offences","Merger & Amalgamation Matters"] },
   { slug: "legal", title: "Legal Services", icon: Scale, short: "Civil, criminal, property & cyber law.",
     items: ["Civil Litigation", "Criminal Defence", "Matrimonial Disputes", "Property Verification", "Cyber Law", "Arbitration", "Consumer Disputes"] },
   { slug: "ca-certification", title: "CA Certification", icon: BookOpen, short: "Turnover, net worth & VISA certificates.",
@@ -41,6 +41,22 @@ export const services: ServiceCategory[] = [
     items: ["Business Strategy", "Financial Advisory", "Compliance Advisory", "Investment Planning"] },
   { slug: "secretarial", title: "Secretarial Services", icon: Landmark, short: "End-to-end corporate secretarial support.",
     items: ["Board Meetings", "AGM Compliance", "Minutes & Resolutions", "Statutory Registers"] },
+  {
+    slug: "income-tax-training",
+    title: "Training & Placement",
+    icon: Medal,
+    short: "Practical tax training with placement support in accounting and compliance roles.",
+    items: [
+      "Income Tax Return Filing (ITR)",
+      "TDS / TCS Compliance",
+      "GST Basics & Filing",
+      "Tax Audit Procedures",
+      "Practical Accounting Software Training (Tally / Excel)",
+      "Interview Preparation & Placement Support",
+      "CMA Articleship",
+      "CA Articleship","Paid Articleship"
+    ]
+  }
 ];
 
 export const blogPosts = [

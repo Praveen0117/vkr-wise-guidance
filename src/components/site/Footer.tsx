@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Linkedin, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Linkedin, Twitter, Instagram, Mail, Phone, MapPin, Youtube } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -21,8 +21,21 @@ export function Footer() {
             Complete Tax, Legal & Compliance solutions for businesses and individuals across India.
           </p>
           <div className="mt-5 flex gap-3">
-            {[Facebook, Linkedin, Twitter, Instagram].map((Icon, i) => (
-              <a key={i} href="#" className="rounded-full border border-white/15 p-2 transition-colors hover:bg-white/10" aria-label="social">
+            {[
+              { Icon: Facebook, url: "https://www.facebook.com/share/1B8NAKpdw5/" },
+              { Icon: Linkedin, url: "https://www.youtube.com/@gsttelugu" },
+              { Icon: Twitter, url: "https://www.youtube.com/@gsttelugu" },
+              { Icon: Instagram, url: "https://www.instagram.com/krishna_gsttelugu?igsh=aW1rc3dqYXFqanV2" },
+              { Icon: Youtube, url: "https://www.youtube.com/@gsttelugu" },
+            ].map(({ Icon, url }, i) => (
+              <a
+                key={i}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-white/15 p-2 transition-colors hover:bg-white/10"
+                aria-label="social"
+              >
                 <Icon className="h-4 w-4" />
               </a>
             ))}
