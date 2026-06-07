@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { SectionHeading } from "./SectionHeading";
 import { GraduationCap, Briefcase, User } from "lucide-react";
 
@@ -96,16 +97,19 @@ const team: Member[] = [
 ];
 
 function Avatar({ m, className }: { m: Member; className?: string }) {
-  if (m.image) {
+  const [failed, setFailed] = useState(false);
+
+  if (m.image && !failed) {
     return (
       <img
-        src={m.image}
+        src={encodeURI(m.image)}
         alt={`${m.name} – ${m.role}`}
         loading="lazy"
         decoding="async"
         width={400}
         height={400}
-        className={className ?? "h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"}
+        onError={() => setFailed(true)}
+        className={className ?? "h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"}
       />
     );
   }
@@ -130,7 +134,7 @@ export function TeamSection() {
       <div className="mt-12 overflow-hidden rounded-2xl shadow-[var(--shadow-elegant)]" style={{ background: "var(--gradient-hero)" }}>
         <div className="flex flex-col sm:flex-row">
           {/* Image — fixed height, doesn't stretch vertically */}
-          <div className="h-64 w-full shrink-0 overflow-hidden sm:h-auto sm:w-56 md:w-64">
+          <div className="h-64 w-full shrink-0 overflow-hidden bg-secondary sm:h-auto sm:w-56 md:w-64">
             <img
               src={founder.image}
               alt={`${founder.name} – ${founder.role}`}
@@ -139,7 +143,7 @@ export function TeamSection() {
               fetchPriority="high"
               width={400}
               height={500}
-              className="h-full w-full object-cover object-center"
+              className="h-full w-full object-cover object-top"
             />
           </div>
           {/* Content */}
